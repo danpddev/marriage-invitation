@@ -1,0 +1,130 @@
+:root {
+  --cream: #f8f4e9;
+  --paper: #fdfbf6;
+  --blush: #ffeee2;
+  --sand: #ded0bf;
+  --ink: #1e2b25;
+  --muted: #5c6b61;
+  --sage: #6c8773;
+  --orange: #e98843;
+  --line: #d4d1bf;
+  color-scheme: light;
+  font-family: "DM Sans", sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: #d9d2c6; }
+body { margin: 0; color: var(--ink); background: radial-gradient(circle at 50% 0%, #f7efe5 0, #d9d2c6 55%, #c9c0b2 100%); }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; }
+.invitation { width: min(100%, 430px); margin-inline: auto; background: var(--cream); overflow: hidden; box-shadow: 0 0 54px rgba(38, 30, 23, .18); }
+.hero { height: 859px; padding: 24px 0 40px; background: var(--blush); display: flex; flex-direction: column; align-items: center; gap: 16px; overflow: hidden; }
+.hero > * { flex-shrink: 0; }
+.music-pill { width: calc(100% - 56px); height: 44px; padding: 10px 14px; border: 0; border-radius: 24px; background: rgba(255,255,255,.55); color: var(--orange); display: grid; grid-template-columns: 24px 1fr 56px; align-items: center; gap: 12px; text-align: left; cursor: pointer; }
+.music-pill img { width: 24px; height: 24px; }
+.music-pill span { font-size: 12px; font-weight: 500; }
+.music-pill .track-time { text-align: right; font-size: 11px; font-weight: 400; }
+.eyebrow { margin: 0; color: var(--sage); font-size: 10px; line-height: 24px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; text-align: center; }
+.eyebrow--orange { color: var(--orange); letter-spacing: .24em; }
+.eyebrow--dark { color: #111; }
+.couple-name { height: 124px; margin: -4px 0 0; font-family: "Ephesis", cursive; font-weight: 400; font-size: 50px; line-height: .72; text-align: center; color: #111; display: flex; flex-direction: column; align-items: center; position: relative; z-index: 2; }
+.couple-name em { font-family: "Ephesis", cursive; font-size: 39px; font-style: normal; line-height: .72; }
+.hands-art { width: 100%; height: auto; aspect-ratio: 430 / 212; object-fit: contain; margin-top: -5px; }
+.date-line { margin: 0; font-size: 12px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; }
+.location-line { margin: -8px 0 0; color: var(--orange); font-size: 13px; }
+.hero-photo { width: 100%; height: auto; aspect-ratio: 430 / 287; object-fit: cover; margin-top: -3px; }
+.section { padding: 28px; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+.section h2, .section h3 { font-family: "Cormorant Garamond", serif; margin: 0; font-weight: 600; }
+.section h2 { font-size: 40px; line-height: 1.05; }
+.body-copy { max-width: 352px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+.music-section { gap: 12px; background: var(--paper); }
+.music-card { width: 100%; height: 92px; padding: 16px; border-radius: 20px; background: #fff; display: grid; grid-template-columns: 52px 1fr 24px; align-items: center; gap: 14px; box-shadow: 0 10px 24px -8px rgba(20,31,26,.08); text-align: left; }
+.album-art { width: 52px; height: 52px; }
+.track-info { min-width: 0; display: flex; flex-direction: column; gap: 5px; }
+.track-info strong { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 13px; font-weight: 500; }
+.track-info > span { color: var(--muted); font-size: 10px; }
+.progress { height: 4px; border-radius: 2px; background: #dfe8dd; overflow: hidden; }
+.progress span { display: block; width: 44%; height: 100%; background: var(--sage); transition: width .3s linear; }
+.icon-button { width: 28px; height: 28px; padding: 2px; border: 0; background: transparent; cursor: pointer; border-radius: 50%; }
+.icon-button img { width: 24px; height: 24px; }
+.invite-section { background: var(--blush); }
+.guest-name { margin: -2px 0; padding: 0 12px; font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 40px; line-height: 48px; }
+.invite-section h2 { font-size: 46px; font-style: italic; font-weight: 400; }
+.section-icon { width: 28px; height: 28px; }
+.section-icon--large { width: 34px; height: 34px; }
+.countdown-section { gap: 18px; background: var(--sand); }
+.countdown-section h2 { font-size: 36px; }
+.countdown { width: 100%; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.countdown > div { aspect-ratio: 1; border-radius: 50%; background: var(--paper); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.countdown strong { font-family: "Cormorant Garamond", serif; font-size: 28px; line-height: 1; }
+.countdown span { margin-top: 4px; color: var(--sage); font-size: 8px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; }
+.primary-button, .secondary-button { border: 0; text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 10px; transition: transform .2s ease, filter .2s ease; }
+.primary-button { width: 100%; min-height: 52px; padding: 13px 20px; border-radius: 27px; color: var(--cream); background: var(--orange); font-size: 18px; font-weight: 500; }
+.primary-button img { width: 22px; height: 22px; }
+.primary-button:hover, .secondary-button:hover { filter: brightness(.96); transform: translateY(-1px); }
+.primary-button:active, .secondary-button:active { transform: translateY(1px); }
+.event-section { gap: 18px; background: var(--paper); }
+.event-card { width: 100%; padding: 22px; border: 1px solid var(--line); border-radius: 22px; background: #fff; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.event-card h3 { font-size: 32px; line-height: 1; }
+.venue { margin: 0; color: var(--orange); font-family: "Cormorant Garamond", serif; font-size: 24px; font-weight: 600; }
+.event-card address { margin: 0; color: var(--muted); font-size: 14px; font-style: normal; }
+.secondary-button { min-width: 176px; min-height: 44px; padding: 9px 16px; border-radius: 22px; background: var(--line); color: var(--ink); font-size: 15px; font-weight: 500; }
+.story-section { gap: 20px; background: var(--blush); color: #111; }
+.story-section h2 { font-size: 38px; line-height: 1.05; }
+.timeline { width: 100%; list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.timeline li { padding: 12px 16px; border-radius: 18px; background: rgba(222,208,191,.6); display: flex; flex-direction: column; gap: 4px; }
+.timeline span { font-size: 10px; font-weight: 700; letter-spacing: .18em; }
+.timeline strong { color: var(--orange); font-family: "Cormorant Garamond", serif; font-size: 24px; }
+.timeline p { margin: 0; color: var(--orange); font-size: 12px; }
+.dress-section { min-height: 290px; position: relative; gap: 16px; background: #fff; overflow: hidden; }
+.dress-section h2 { font-size: 38px; }
+.dress-section .body-copy { font-size: 14px; }
+.palette { width: 260px; height: 42px; }
+.dress-art { position: absolute; top: 67px; object-fit: contain; }
+.dress-art--left { left: 28px; width: 67px; height: 100px; }
+.dress-art--right { right: 8px; width: 88px; height: 103px; }
+.gifts-section { background: var(--sand); }
+.gifts-section h2 { font-size: 34px; line-height: 1.08; }
+.primary-button--small { width: 250px; min-height: 48px; font-size: 15px; }
+.primary-button--small img, .rsvp-button img { width: 18px; height: 18px; }
+.rsvp-section { background: #fff; }
+.rsvp-section h2 { font-size: 42px; }
+.rsvp-button { width: 300px; min-height: 54px; font-size: 16px; }
+.footer { padding: 34px; background: var(--blush); display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+.footer p { margin: 0; font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 38px; line-height: 1; }
+.footer span { color: var(--orange); font-size: 12px; }
+.footer strong { font-size: 10px; letter-spacing: .18em; text-transform: uppercase; }
+.gift-dialog { width: min(calc(100% - 40px), 360px); padding: 32px 28px 28px; border: 0; border-radius: 24px; background: var(--paper); color: var(--ink); text-align: center; box-shadow: 0 30px 80px rgba(20,31,26,.25); }
+.gift-dialog::backdrop { background: rgba(30,43,37,.55); backdrop-filter: blur(4px); }
+.gift-dialog > img { width: 38px; height: 38px; }
+.gift-dialog h2 { margin: 8px 0; font-family: "Cormorant Garamond", serif; font-size: 30px; line-height: 1; }
+.gift-dialog > p:not(.eyebrow) { color: var(--muted); font-size: 14px; line-height: 1.5; }
+.dialog-close { position: absolute; top: 10px; right: 14px; border: 0; background: transparent; color: var(--muted); font-size: 28px; cursor: pointer; }
+.toast { position: fixed; z-index: 10; left: 50%; bottom: 20px; translate: -50% 20px; width: max-content; max-width: calc(100% - 40px); padding: 11px 16px; border-radius: 22px; background: var(--ink); color: #fff; font-size: 13px; opacity: 0; pointer-events: none; transition: opacity .2s ease, translate .2s ease; }
+.toast.is-visible { opacity: 1; translate: -50% 0; }
+
+@keyframes note-wiggle { 0% { rotate: 5deg; } 17.5% { rotate: -5deg; } 35%,100% { rotate: 0deg; } }
+@keyframes heart-beat { 0%,7.5%,37.5%,100% { scale: 1; } 22.5% { scale: 1.16; } }
+@keyframes calendar-hop { 0%,15%,40%,100% { translate: 0 0; } 27.5% { translate: 0 -3px; } }
+@keyframes gift-wiggle { 0%,40%,77.5%,100% { rotate: 0deg; } 52.5% { rotate: 7deg; } 65% { rotate: -7deg; } }
+@keyframes rsvp-beat { 0%,50%,80%,100% { scale: 1; } 65% { scale: 1.18; } }
+.animated-note { animation: note-wiggle 2s linear infinite; }
+.animated-heart { animation: heart-beat 2s linear infinite; }
+.animated-calendar { animation: calendar-hop 2s linear infinite; }
+.animated-gift { animation: gift-wiggle 2s linear infinite; }
+.animated-rsvp { animation: rsvp-beat 2s linear infinite; }
+
+@media (max-width: 380px) {
+  .section { padding-inline: 20px; }
+  .music-pill { width: calc(100% - 40px); }
+  .countdown { gap: 6px; }
+  .dress-art--left { left: 8px; }
+  .dress-art--right { right: -8px; }
+}
+@media (min-width: 720px) {
+  body { padding-block: 28px; }
+  .invitation { border-radius: 28px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}

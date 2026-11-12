@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#ffeee2">
+  <meta name="description" content="Invitación a la boda de Andrés y Marianny — 6 de diciembre de 2026 en Bogotá.">
+  <meta property="og:title" content="Andrés & Marianny — Nos casamos">
+  <meta property="og:description" content="Acompáñanos a celebrar el inicio de nuestra vida juntos.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://andres-marianny-boda.quietbowl129.chatgpt.site">
+  <meta property="og:image" content="https://andres-marianny-boda.quietbowl129.chatgpt.site/assets/couple.png">
+  <title>Andrés & Marianny — Invitación de boda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;700&family=Ephesis&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="invitation" data-node-id="4:2">
+    <section class="hero" aria-labelledby="couple-name">
+      <button class="music-pill" id="topMusicToggle" type="button" aria-label="Activar o pausar la música">
+        <img class="animated-note" src="assets/music-note.svg" alt="">
+        <span id="musicStatus">Música activada</span>
+        <span class="track-time" id="trackTime">02:14</span>
+      </button>
+      <p class="eyebrow eyebrow--orange">Nos casamos</p>
+      <h1 class="couple-name" id="couple-name"><span>Andrés</span><em>&</em><span>Marianny</span></h1>
+      <img class="hands-art" src="assets/hands-love.svg" alt="Ilustración de dos manos entrelazadas con la palabra love">
+      <p class="date-line">06 · Diciembre · 2026</p>
+      <p class="location-line">Bogotá · Colombia</p>
+      <img class="hero-photo" src="assets/couple.png" alt="Andrés y Marianny sonriendo juntos">
+    </section>
+
+    <section class="section music-section" aria-labelledby="music-heading">
+      <p class="eyebrow" id="music-heading">Dale play a nuestra historia</p>
+      <div class="music-card">
+        <img class="album-art" src="assets/album-artwork.svg" alt="">
+        <div class="track-info">
+          <strong>Can’t Help Falling in Love (Violin)</strong>
+          <span>Alan Ng</span>
+          <div class="progress" aria-hidden="true"><span id="musicProgress"></span></div>
+        </div>
+        <button class="icon-button" id="musicToggle" type="button" aria-label="Pausar música">
+          <img id="musicToggleIcon" src="assets/pause.svg" alt="">
+        </button>
+      </div>
+    </section>
+
+    <section class="section invite-section" aria-labelledby="invite-heading">
+      <p class="eyebrow">Con mucha alegría</p>
+      <p class="guest-name" id="guestName">Nombre Invitados</p>
+      <h2 id="invite-heading">¡Estás invitado!</h2>
+      <p class="body-copy">Nos encantará que seas parte de este momento tan especial. Acompáñanos a celebrar el inicio de nuestra vida juntos.</p>
+      <img class="animated-heart section-icon" src="assets/heart.svg" alt="">
+    </section>
+
+    <section class="section countdown-section" aria-labelledby="countdown-heading">
+      <h2 id="countdown-heading">Falta muy poco</h2>
+      <div class="countdown" aria-live="polite">
+        <div><strong id="days">00</strong><span>Días</span></div>
+        <div><strong id="hours">00</strong><span>Horas</span></div>
+        <div><strong id="minutes">00</strong><span>Min</span></div>
+        <div><strong id="seconds">00</strong><span>Seg</span></div>
+      </div>
+      <button class="primary-button" id="calendarButton" type="button">
+        <img class="animated-calendar" src="assets/calendar.svg" alt="">
+        <span>Agendar recordatorio</span>
+      </button>
+    </section>
+
+    <section class="section event-section" aria-labelledby="event-heading">
+      <p class="eyebrow">El día que soñamos</p>
+      <h2 id="event-heading">Celebración</h2>
+      <article class="event-card">
+        <img class="section-icon" src="assets/clock.svg" alt="">
+        <p class="eyebrow">Recepción</p>
+        <h3>4:00 p. m.</h3>
+        <p class="venue">Salón Comunal de Muzu</p>
+        <address>Cl. 42 Sur #51C - 07 · Bogotá</address>
+        <a class="secondary-button" href="https://www.google.com/maps/search/?api=1&query=Sal%C3%B3n+Comunal+de+Muzu+Cl.+42+Sur+51C-07+Bogot%C3%A1" target="_blank" rel="noreferrer">Ver ubicación</a>
+      </article>
+    </section>
+
+    <section class="section story-section" aria-labelledby="story-heading">
+      <p class="eyebrow eyebrow--dark">Una historia, tres momentos</p>
+      <h2 id="story-heading">Lo mejor está por<br>comenzar</h2>
+      <ol class="timeline">
+        <li><span>2021</span><strong>Nos encontramos</strong><p>Una conversación que no queríamos terminar.</p></li>
+        <li><span>2025</span><strong>Dijimos sí</strong><p>Elegimos caminar juntos todos los días.</p></li>
+        <li><span>2026</span><strong>Nuestro gran día</strong><p>Y ahora queremos celebrarlo contigo.</p></li>
+      </ol>
+    </section>
+
+    <section class="section dress-section" aria-labelledby="dress-heading">
+      <img class="dress-art dress-art--left" src="assets/dress-left.svg" alt="">
+      <img class="dress-art dress-art--right" src="assets/dress-right.svg" alt="">
+      <p class="eyebrow">Código de vestuario</p>
+      <h2 id="dress-heading">Elegante</h2>
+      <p class="body-copy"><strong>Traje y zapato formal.</strong><br>Recomendamos tonos sobrios.</p>
+      <img class="palette" src="assets/palette.svg" alt="Paleta de colores sugeridos: blanco, gris, verde y marrón">
+    </section>
+
+    <section class="section gifts-section" aria-labelledby="gifts-heading">
+      <img class="animated-gift section-icon" src="assets/gift.svg" alt="">
+      <h2 id="gifts-heading">Tu presencia es<br>nuestro mejor regalo</h2>
+      <p class="body-copy">Si deseas tener un detalle con nosotros, hemos preparado una lista y una opción de aporte por medio de lluvia de sobres.</p>
+      <button class="primary-button primary-button--small" id="giftButton" type="button">Ver lista de regalos <img src="assets/chevron.svg" alt=""></button>
+    </section>
+
+    <section class="section rsvp-section" aria-labelledby="rsvp-heading">
+      <img class="animated-rsvp section-icon section-icon--large" src="assets/heart-rsvp.svg" alt="">
+      <h2 id="rsvp-heading">¿Nos acompañas?</h2>
+      <p class="body-copy">Confirma tu asistencia antes del 09 de noviembre de 2026. Nos hará muy felices contar contigo.</p>
+      <a class="primary-button rsvp-button" id="rsvpButton" href="https://wa.me/?text=Hola%20Andr%C3%A9s%20y%20Marianny%2C%20confirmo%20mi%20asistencia%20a%20su%20boda.%20%C2%A1Gracias%20por%20la%20invitaci%C3%B3n!" target="_blank" rel="noreferrer">Confirmar asistencia <img src="assets/chevron.svg" alt=""></a>
+    </section>
+
+    <footer class="footer">
+      <p>A & M</p>
+      <span>Con amor, Andrés y Marianny</span>
+      <strong>06 · 12 · 2026</strong>
+    </footer>
+  </main>
+
+  <dialog class="gift-dialog" id="giftDialog" aria-labelledby="gift-dialog-title">
+    <button class="dialog-close" id="closeGiftDialog" type="button" aria-label="Cerrar">×</button>
+    <img src="assets/gift.svg" alt="">
+    <p class="eyebrow">Lista de regalos</p>
+    <h2 id="gift-dialog-title">El mejor detalle es compartir este día</h2>
+    <p>Si deseas obsequiarnos algo, tendremos una lluvia de sobres durante la celebración.</p>
+    <button class="secondary-button" id="acceptGiftDialog" type="button">Entendido</button>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

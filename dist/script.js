@@ -12,12 +12,28 @@ function updateCountdown() {
   $("#seconds").textContent = pad(totalSeconds % 60);
 }
 
-function personalizeInvitation() {
-  const params = new URLSearchParams(window.location.search);
-  const guest = params.get("invitado") || params.get("guest");
-  if (!guest) return;
-  const cleanGuest = guest.trim().slice(0, 70);
-  if (cleanGuest) $("#guestName").textContent = cleanGuest;
+async function personalizeInvitation() {
+  const match = window.location.pathname.match(/^\/([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\/?$/i);
+  if (!match) return;
+
+  try {
+    const response = await fetch("/invitados.json", { cache: "no-store" });
+    if (!response.ok) return;
+    const guests = await response.json();
+    const id = match[1].toLowerCase();
+    if (!guests || !Object.prototype.hasOwnProperty.call(guests, id)) return;
+    const name = guests[id];
+    if (typeof name !== "string" || !name.trim()) return;
+
+    $("#guestName").textContent = name.trim();
+    $("#waitingPage").hidden = true;
+    $("#invitationPage").hidden = false;
+    updateCountdown();
+    renderMusic();
+    setInterval(updateCountdown, 1000);
+  } catch (error) {
+    console.error("No se pudo cargar la invitación.", error);
+  }
 }
 
 let musicPlaying = true;
@@ -33,7 +49,7 @@ function toggleMusic() {
 }
 
 setInterval(() => {
-  if (!musicPlaying) return;
+  if ($("#invitationPage").hidden || !musicPlaying) return;
   simulatedProgress = simulatedProgress >= 100 ? 0 : simulatedProgress + .12;
   $("#musicProgress").style.width = `${simulatedProgress}%`;
 }, 250);
@@ -95,6 +111,3 @@ $("#topMusicToggle").addEventListener("click", toggleMusic);
 $("#calendarButton").addEventListener("click", downloadCalendarEvent);
 
 personalizeInvitation();
-updateCountdown();
-renderMusic();
-setInterval(updateCountdown, 1000);

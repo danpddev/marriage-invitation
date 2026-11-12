@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="es">
 <head>
+  <base href="/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#ffeee2">
@@ -18,7 +19,18 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <main class="invitation" data-node-id="4:2">
+  <main class="invitation waiting-page" id="waitingPage" aria-labelledby="waiting-heading">
+    <section class="section waiting-section">
+      <p class="eyebrow eyebrow--orange">Algo hermoso está por comenzar</p>
+      <img class="hands-art waiting-art" src="assets/hands-love.svg" alt="Dos manos entrelazadas con amor">
+      <img class="animated-heart section-icon" src="assets/heart.svg" alt="">
+      <h1 id="waiting-heading">Pronto, un evento especial</h1>
+      <p class="body-copy">Estamos preparando un momento lleno de amor.<br>Pronto recibirás tu invitación.</p>
+      <span class="waiting-signature">Con mucho cariño</span>
+      <noscript><p class="body-copy">Activa JavaScript para abrir tu invitación personalizada.</p></noscript>
+    </section>
+  </main>
+  <main class="invitation" id="invitationPage" data-node-id="4:2" hidden>
     <section class="hero" aria-labelledby="couple-name">
       <button class="music-pill" id="topMusicToggle" type="button" aria-label="Activar o pausar la música">
         <img class="animated-note" src="assets/music-note.svg" alt="">

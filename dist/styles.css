@@ -13,6 +13,12 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
+.waiting-page { min-height: 100svh; background: var(--blush); }
+.waiting-section { min-height: inherit; justify-content: center; gap: 24px; padding-block: 64px; }
+.waiting-art { max-width: 374px; margin: 0; }
+.waiting-section h1 { margin: 0; max-width: 330px; font-family: "Cormorant Garamond", serif; font-weight: 400; font-style: italic; font-size: clamp(40px, 10vw, 52px); line-height: 1.08; }
+.waiting-signature { color: var(--sage); font-family: "Ephesis", cursive; font-size: 34px; }
 html { scroll-behavior: smooth; background: #d9d2c6; }
 body { margin: 0; color: var(--ink); background: radial-gradient(circle at 50% 0%, #f7efe5 0, #d9d2c6 55%, #c9c0b2 100%); }
 button, a { -webkit-tap-highlight-color: transparent; }

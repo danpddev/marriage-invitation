@@ -39,6 +39,29 @@ usa `HOST_IP=127.0.0.1` y `PORT=8085` en `.env`, y apunta el proxy a
 
 ## Actualizar la invitación
 
+### Invitados y enlaces personalizados
+
+Edita `dist/invitados.json`: cada clave es un UUID y su valor es el nombre del
+invitado. La primera entrada corresponde a Daniel Puerto. Su enlace es:
+
+```text
+http://IP_DEL_VPS:8085/380c51b3-68ea-4638-9a9b-7d3867c52f1a
+```
+
+Usa tu dominio y puerto definitivos al compartir el enlace. Cada invitado nuevo
+debe tener un UUID diferente. En PowerShell puedes generarlo con
+`[guid]::NewGuid().ToString()`; en Linux, con `uuidgen`.
+
+La raíz del sitio y los enlaces sin UUID válido o sin un invitado registrado
+muestran la página «Pronto, un evento especial». También se muestra si no se
+puede cargar el JSON. Los nombres se insertan como texto, sin interpretar HTML.
+Los parámetros antiguos `?invitado=` y `?guest=` ya no personalizan la invitación.
+
+El JSON es público porque el sitio es estático; el UUID personaliza el enlace,
+pero no ofrece autenticación. Guarda únicamente los nombres que quieras publicar.
+
+### Reconstruir la imagen
+
 Después de modificar o subir los archivos de `dist/`, reconstruye la imagen:
 
 ```sh

@@ -1,0 +1,8 @@
+services:
+  invitacion:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${HOST_IP:-0.0.0.0}:${PORT:-8085}:80"
+    restart: unless-stopped

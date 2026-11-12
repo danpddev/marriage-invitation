@@ -41,8 +41,26 @@ usa `HOST_IP=127.0.0.1` y `PORT=8085` en `.env`, y apunta el proxy a
 
 ### Invitados y enlaces personalizados
 
-Edita `dist/invitados.json`: cada clave es un UUID y su valor es el nombre del
-invitado. La primera entrada corresponde a Daniel Puerto. Su enlace es:
+Edita `dist/invitados.json`: cada clave es un UUID y su valor contiene el nombre
+y el tipo de invitación. Por ejemplo:
+
+```json
+{
+  "380c51b3-68ea-4638-9a9b-7d3867c52f1a": {
+    "nombre": "Daniel Puerto",
+    "tipo": "uno"
+  }
+}
+```
+
+Usa `"tipo": "uno"` para una persona: **¡Estás invitado!**.
+Usa `"tipo": "varios"` para una pareja o familia: **¡Están invitados!**.
+En `nombre` puedes escribir los nombres de la pareja o el nombre de la familia.
+Si omites `tipo`, se considera `uno`. Las entradas antiguas con solo el nombre
+como texto siguen funcionando como invitaciones individuales. Un tipo diferente
+de `uno` o `varios` muestra la página de espera para esa entrada.
+
+La primera entrada corresponde a Daniel Puerto y conserva su enlace:
 
 ```text
 http://IP_DEL_VPS:8085/380c51b3-68ea-4638-9a9b-7d3867c52f1a
@@ -70,6 +88,16 @@ docker compose up -d --build
 
 Las etiquetas `og:url` y `og:image` de `dist/index.html` contienen el dominio
 original. Actualízalas al dominio definitivo para compartir la invitación.
+
+## Música de la invitación
+
+El reproductor utiliza el audio nativo del navegador y el MP3 de `dist/assets/`,
+sin depender de librerías externas. Intenta comenzar a reproducir cuando se
+valida el invitado. Si el navegador bloquea la reproducción automática con
+sonido, el invitado debe pulsar cualquiera de los dos botones de música.
+Ambos permiten pausar y continuar; la barra y los tiempos reflejan la posición
+real de la canción. Al terminar, el botón permite reproducirla desde el inicio.
+La página de espera no reproduce ni precarga la canción.
 
 ## Estado, registros y apagado
 

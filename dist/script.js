@@ -22,37 +22,83 @@ async function personalizeInvitation() {
     const guests = await response.json();
     const id = match[1].toLowerCase();
     if (!guests || !Object.prototype.hasOwnProperty.call(guests, id)) return;
-    const name = guests[id];
+    const guest = guests[id];
+    // Keep existing name-only entries working as individual invitations.
+    const name = typeof guest === "string" ? guest : guest?.nombre;
+    const type = typeof guest === "string" ? "uno" : guest?.tipo ?? "uno";
     if (typeof name !== "string" || !name.trim()) return;
+    if (type !== "uno" && type !== "varios") return;
 
     $("#guestName").textContent = name.trim();
+    $("#invite-heading").textContent = type === "varios" ? "¡Están invitados!" : "¡Estás invitado!";
+    $("#invite-body").textContent = type === "varios" ? "sean" : "seas";
     $("#waitingPage").hidden = true;
     $("#invitationPage").hidden = false;
     updateCountdown();
     renderMusic();
+    playMusic();
     setInterval(updateCountdown, 1000);
   } catch (error) {
     console.error("No se pudo cargar la invitación.", error);
   }
 }
 
-let musicPlaying = true;
-let simulatedProgress = 44;
-function renderMusic() {
-  $("#musicStatus").textContent = musicPlaying ? "Música activada" : "Música pausada";
-  $("#musicToggle").setAttribute("aria-label", musicPlaying ? "Pausar música" : "Reanudar música");
-  $("#musicToggleIcon").src = musicPlaying ? "assets/pause.svg" : "assets/music-note.svg";
+const weddingAudio = $("#weddingAudio");
+let musicError = false;
+
+function formatAudioTime(seconds) {
+  if (!Number.isFinite(seconds) || seconds < 0) return "--:--";
+  return `${pad(Math.floor(seconds / 60))}:${pad(Math.floor(seconds % 60))}`;
 }
-function toggleMusic() {
-  musicPlaying = !musicPlaying;
+
+function renderMusic() {
+  const playing = !weddingAudio.paused && !weddingAudio.ended;
+  const label = playing ? "Pausar música" : "Reproducir música";
+  $("#musicStatus").textContent = musicError ? "Audio no disponible" : playing ? "Música activada" : "Reproducir música";
+  for (const selector of ["#musicToggle", "#topMusicToggle"]) {
+    $(selector).setAttribute("aria-label", label);
+    $(selector).setAttribute("aria-pressed", String(playing));
+  }
+  $("#musicToggleIcon").src = playing ? "assets/pause.svg" : "assets/play.svg";
+
+  const current = weddingAudio.currentTime || 0;
+  const duration = weddingAudio.duration;
+  const progress = Number.isFinite(duration) && duration > 0
+    ? Math.min(100, Math.max(0, current / duration * 100)) : 0;
+  $("#musicProgress").style.width = `${progress}%`;
+  $("#musicProgressBar").setAttribute("aria-valuenow", String(Math.round(progress)));
+  $("#trackTime").textContent = formatAudioTime(current);
+  $("#musicTime").textContent = `${formatAudioTime(current)} / ${formatAudioTime(duration)}`;
+}
+
+async function playMusic() {
+  if ($("#invitationPage").hidden) return;
+  musicError = false;
+  try {
+    await weddingAudio.play();
+  } catch (error) {
+    // Browsers may require a user gesture before playing audible media.
+    musicError = error.name !== "NotAllowedError" && error.name !== "AbortError";
+  }
   renderMusic();
 }
 
-setInterval(() => {
-  if ($("#invitationPage").hidden || !musicPlaying) return;
-  simulatedProgress = simulatedProgress >= 100 ? 0 : simulatedProgress + .12;
-  $("#musicProgress").style.width = `${simulatedProgress}%`;
-}, 250);
+function toggleMusic() {
+  if (weddingAudio.paused || weddingAudio.ended) {
+    if (weddingAudio.ended) weddingAudio.currentTime = 0;
+    playMusic();
+  } else {
+    weddingAudio.pause();
+  }
+}
+
+for (const event of ["play", "playing", "pause", "ended", "timeupdate", "loadedmetadata", "durationchange", "emptied"]) {
+  weddingAudio.addEventListener(event, renderMusic);
+}
+weddingAudio.addEventListener("error", () => {
+  musicError = true;
+  renderMusic();
+});
 
 function downloadCalendarEvent() {
   const ics = [
@@ -99,7 +145,10 @@ function showToast(message) {
 const giftDialog = $("#giftDialog");
 $("#giftButton").addEventListener("click", () => giftDialog.showModal());
 $("#closeGiftDialog").addEventListener("click", () => giftDialog.close());
-$("#acceptGiftDialog").addEventListener("click", () => giftDialog.close());
+$("#acceptGiftDialog").addEventListener("click", () => {
+  giftDialog.close();
+  window.open('https://docs.google.com/spreadsheets/d/1evWLB6Fx00jHGuXn-tNj37cd7ef4PQk3_mU6bPnd61o/edit?usp=drivesdk', '_blank');
+});
 giftDialog.addEventListener("click", (event) => {
   const bounds = giftDialog.getBoundingClientRect();
   const outside = event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom;

@@ -1,3 +1,146 @@
 {
-  "380c51b3-68ea-4638-9a9b-7d3867c52f1a": "Daniel Puerto"
+  "57ab3642-c4d6-4a7f-a3b9-3592dec23f59": {
+    "nombre": "ANDRES Y MARIANNY",
+    "tipo": "varios"
+  },
+  "f8c6d3f6-f89c-4a42-b3f3-c11d902adb21": {
+    "nombre": "Luis Rivero Sra. e hijo",
+    "tipo": "varios"
+  },
+  "6b0a6c09-5496-4cb5-9a78-578c4b175630": {
+    "nombre": "Fabian Puerto Sra. e hija",
+    "tipo": "varios"
+  },
+  "ad4f1507-59cd-4196-a6d2-35d705c10210": {
+    "nombre": "Daniel Puerto y Camila Quecan",
+    "tipo": "varios"
+  },
+  "45276000-a8ea-4f4b-a0ed-142c5fcadd12": {
+    "nombre": "Nerwin Atencio e Hijo",
+    "tipo": "varios"
+  },
+  "518f64d8-8539-4ade-97f3-90817e262d21": {
+    "nombre": "Ana Victoria Blanco",
+    "tipo": "uno"
+  },
+  "c3c7a82b-f12b-4c6b-b9c6-bd81918ce771": {
+    "nombre": "Victor Valencia Sra. e hija",
+    "tipo": "varios"
+  },
+  "008a4145-6620-4875-b9e3-bbdf73c372d8": {
+    "nombre": "Alvaro Ortiz Sra. e hija",
+    "tipo": "varios"
+  },
+  "2ea0c23e-8270-4484-9661-913aa6006991": {
+    "nombre": "Joel Ortiz",
+    "tipo": "uno"
+  },
+  "a462b079-ccd4-48f6-a4db-4f8072962267": {
+    "nombre": "Fernado Puerto Sra. e hijo",
+    "tipo": "varios"
+  },
+  "da38fb90-f4ca-4621-a6c3-c54b3aaa01c2": {
+    "nombre": "Jhon Puerto y Sra.",
+    "tipo": "varios"
+  },
+  "7a92f589-4d4c-4be8-b473-7d7d10af2d25": {
+    "nombre": "Alicia Rosales",
+    "tipo": "uno"
+  },
+  "4e1c525b-e881-4999-a476-b9bf6aef3496": {
+    "nombre": "David Daza",
+    "tipo": "uno"
+  },
+  "8b99655f-bb5a-4223-a876-b910c35d7b1c": {
+    "nombre": "Carlos Daza",
+    "tipo": "uno"
+  },
+  "51f423cd-b119-4826-a993-7d6ff6c3ee5d": {
+    "nombre": "Victor Daza",
+    "tipo": "uno"
+  },
+  "b1ffc725-f175-4686-b846-a581a816a120": {
+    "nombre": "Paula Diaz",
+    "tipo": "uno"
+  },
+  "d58648dd-754a-4343-8eb6-dc16fb938598": {
+    "nombre": "Reina Zapata e hija",
+    "tipo": "varios"
+  },
+  "2a9c5211-41dc-4b38-bdca-154e0c114b6d": {
+    "nombre": "Arianne Zapata",
+    "tipo": "uno"
+  },
+  "f6a2c92e-5213-42a4-850c-6d3d733f24e9": {
+    "nombre": "Ali Perez Sra. e hijas",
+    "tipo": "varios"
+  },
+  "db4593d3-a28a-4114-891a-a4ebf63fc154": {
+    "nombre": "Gissel Escobar",
+    "tipo": "varios"
+  },
+  "18675595-c439-41df-9739-d367d7ba9fba": {
+    "nombre": "Julieth Muñoz",
+    "tipo": "varios"
+  },
+  "00698e43-1d12-4dd1-9410-909413d23826": {
+    "nombre": "Nicolas Rodriguez y Sra.",
+    "tipo": "varios"
+  },
+  "530f5a58-a938-4a79-96b8-f996905eb51d": {
+    "nombre": "Michael Brown Sra. e hijo",
+    "tipo": "varios"
+  },
+  "e56c9a46-8cfd-4583-a59f-15bf5481e3b8": {
+    "nombre": "Barbara Gil",
+    "tipo": "uno"
+  },
+  "f1777228-b781-4f3e-9064-a6f3cc595975": {
+    "nombre": "Yaquelyn chila",
+    "tipo": "uno"
+  },
+  "689d4f40-1d52-4bdc-a582-520521555de6": {
+    "nombre": "Carolina Meneses",
+    "tipo": "uno"
+  },
+  "4daa765c-5bb4-4dda-ae00-1d2212f96954": {
+    "nombre": "Sauli Forero",
+    "tipo": "uno"
+  },
+  "096c0243-4010-49ce-93fb-09fb92e40f2f": {
+    "nombre": "Andrés Castellanos y Sra.",
+    "tipo": "varios"
+  },
+  "ebebf399-27f9-4fc9-9301-131fd36a05e7": {
+    "nombre": "Alvaro Colorado",
+    "tipo": "uno"
+  },
+  "5752fab0-9908-40f1-8377-2352a3001f7e": {
+    "nombre": "Jorge Cortes y Sra.",
+    "tipo": "varios"
+  },
+  "3724ff24-0de9-47a7-9d86-13a409f52952": {
+    "nombre": "Wilmer Vanegas y Sra.",
+    "tipo": "varios"
+  },
+  "4824060f-31e8-4b29-934c-ab4bd87f00da": {
+    "nombre": "Andrés Diaz y Valentina Cubillos",
+    "tipo": "varios"
+  },
+  "ea8e04ae-ace0-4f95-be79-56961a8643b5": {
+    "nombre": "Miguel Zuñiga",
+    "tipo": "uno"
+  },
+  "346f5cdd-8f15-45c3-9990-e83a33d4065b": {
+    "nombre": "Alvaro Ochoa y Sra.",
+    "tipo": "varios"
+  },
+  "267c456b-d17c-4d68-b056-942fea3dcf0b": {
+    "nombre": "Uridiban Bernal y Sra.",
+    "tipo": "varios"
+  },
+  "c0011083-89ba-4a3b-9014-6e4153d6eea2": {
+    "nombre": "Antonio Melo y Sra",
+    "tipo": "varios"
+  }
 }

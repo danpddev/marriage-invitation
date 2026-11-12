@@ -157,6 +157,9 @@ giftDialog.addEventListener("click", (event) => {
 
 $("#musicToggle").addEventListener("click", toggleMusic);
 $("#topMusicToggle").addEventListener("click", toggleMusic);
-$("#calendarButton").addEventListener("click", downloadCalendarEvent);
+$("#calendarButton").addEventListener("click", ()=> {
+  downloadCalendarEvent();
+  window.open('https://calendar.google.com/calendar/render?action=TEMPLATE&text=Matrimonio%20Andres%20y%20Mary&dates=20261206T150000/20261206T200000&details=Evento%20de%20celebracion%20matrimonio%20Andre%20y%20Mary&ctz=America/Bogota', '_blank');
+});
 
 personalizeInvitation();

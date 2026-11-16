@@ -116,7 +116,7 @@
     "tipo": "uno"
   },
   "5752fab0-9908-40f1-8377-2352a3001f7e": {
-    "nombre": "Jorge Cortes y Sra.",
+    "nombre": "Jorge Cortes y Natalia Molano.",
     "tipo": "varios"
   },
   "3724ff24-0de9-47a7-9d86-13a409f52952": {
@@ -142,5 +142,9 @@
   "c0011083-89ba-4a3b-9014-6e4153d6eea2": {
     "nombre": "Antonio Melo y Sra",
     "tipo": "varios"
+  },
+  "a447544b-f206-4b69-a91f-6a0d777e644f": {
+    "nombre": "James Valvuena",
+    "tipo": "uno"
   }
 }
